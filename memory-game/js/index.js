@@ -34,8 +34,8 @@ $(document).ready(function () {
 	//When two recently clicked cells are not matched
 	function wrongPair() {
 		clickedArray.forEach(cell => {
-			cell.style.backgroundColor = "blue";
-			cell.innerHTML = "";
+			cell.style.backgroundColor = 'blue';
+			cell.innerHTML = ' ';
 			cell.clicked = false;
 		});
 		clickedArray.length = 0;
@@ -47,7 +47,7 @@ $(document).ready(function () {
 		numCompleted += 2;
 		clickedArray.forEach(cell => {
 			cell.completed = true;
-			cell.style.backgroundColor = "purple";
+			cell.style.backgroundColor = 'purple';
 		});
 		clickedArray.length = 0;
 	}
@@ -64,7 +64,7 @@ $(document).ready(function () {
 		resetGlobals();
 		$('#timer').fadeOut(800);
 		$('#timer').html('');
-		$('td').html('');
+		$('td').html(' ');
 		$('#gridTable').toggleClass('jello');
 		const grid = document.getElementsByTagName('td');
 		const answers = randomAnswers();
