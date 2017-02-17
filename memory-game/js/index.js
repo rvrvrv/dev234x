@@ -35,7 +35,7 @@ $(document).ready(function () {
 	function wrongPair() {
 		clickedArray.forEach(cell => {
 			cell.style.backgroundColor = 'blue';
-			cell.innerHTML = ' ';
+			cell.innerHTML = '';
 			cell.clicked = false;
 		});
 		clickedArray.length = 0;
@@ -64,7 +64,7 @@ $(document).ready(function () {
 		resetGlobals();
 		$('#timer').fadeOut(800);
 		$('#timer').html('');
-		$('td').html(' ');
+		$('td').html('');
 		$('#gridTable').toggleClass('jello');
 		const grid = document.getElementsByTagName('td');
 		const answers = randomAnswers();
