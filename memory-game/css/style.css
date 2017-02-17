@@ -2,7 +2,6 @@
 *:before,
 *:after {
 	overflow: hidden;
-	cursor: default !important;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -48,6 +47,7 @@ td {
 }
 
 td {
+	cursor: pointer;
 	width: 100px;
 	height: 100px;
 	text-align: center;
