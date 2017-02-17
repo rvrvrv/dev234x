@@ -42,11 +42,11 @@ table {
 table,
 td {
 	border: 6px solid black;
-	padding: 2px;
 	color: white;
 }
 
 td {
+	padding: 0;
 	cursor: pointer;
 	width: 100px;
 	height: 100px;
@@ -68,4 +68,23 @@ button:focus {
 #timer {
 	font-weight: 700;
 	display: none;
+}
+
+/* For mobile devices */
+
+@media screen and (orientation: portrait) and (max-height: 768px) {
+	body {
+		font-size: 28px;
+	}
+	#gameContainer {
+		padding: 0;
+		min-width: 70vw;
+	}
+
+	button {
+		margin-top: -28%;
+	}
+	#timer {
+		margin-top: -15%;
+	}
 }
