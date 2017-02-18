@@ -1,4 +1,4 @@
-*,
+	*,
 *:before,
 *:after {
 	cursor: default;
@@ -23,7 +23,6 @@ h1 {
 	font-size: 1.05em;
 	font-weight: 900;
 	padding: 1.1%;
-
 }
 
 #gameContainer {
@@ -70,79 +69,64 @@ button:focus {
 	display: none;
 }
 
-br {
-	display: none;
-}
+
 /* For mobile devices */
 
 @media screen and (orientation: portrait) and (max-height: 768px) {
-
 	body {
 		font-size: 36px;
 	}
-
 	#gameContainer {
-	min-height: 0;
-	min-width: 0;
-}
-
+		min-height: 0;
+		min-width: 0;
+	}
 	td {
 		width: 17vh;
 		height: 20vh;
 		font-size: 1.2em;
 	}
 
-}
+	@media screen and (orientation: portrait) and (max-height: 640px) {
+		body {
+			font-size: 36px;
+		}
+		#gameContainer {
+			min-height: 0;
+			min-width: 0;
+		}
+		td {
+			width: 17vh;
+			height: 18vh;
+			font-size: 1.2em;
+		}
 
-@media screen and (orientation: portrait) and (max-height: 640px) {
-
-	body {
-		font-size: 36px;
 	}
-
-	#gameContainer {
-	min-height: 0;
-	min-width: 0;
-}
-
-	td {
-		width: 17vh;
-		height: 18vh;
-		font-size: 1.2em;
+	@media screen and (orientation: landscape) and (max-height: 768px) {
+		body {
+			font-size: 36px;
+		}
+		#gameContainer {
+			min-height: 0;
+			min-width: 0;
+		}
+		table {
+			margin-top: 0;
+		}
+		td {
+			width: 26vh;
+			height: 24vh;
+			font-size: 1.2em;
+		}
+		button {
+			position: fixed;
+			bottom: 3%;
+			left: 3%;
+		}
+		#timer {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 25%;
+			line-height: 1em;
+		}
 	}
-
-}
-
-@media screen and (orientation: landscape) and (max-height: 768px) {
-
-	body {
-		font-size: 36px;
-	}
-
-	#gameContainer {
-	min-height: 0;
-	min-width: 0;
-}
-	table {
-		margin-top: 0;
-	}
-	td {
-		width: 26vh;
-		height: 24vh;
-		font-size: 1.2em;
-	}
-
-	button {
-		position: fixed;
-		top: 50%;
-		left: 3%;
-	}
-
-	#timer {
-		position: fixed;
-		text-align: right;
-		top: 50%;
-		right: 0;
-	}
-}
-
