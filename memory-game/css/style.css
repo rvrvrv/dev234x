@@ -1,6 +1,7 @@
 *,
 *:before,
 *:after {
+	cursor: default;
 	overflow: hidden;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -15,20 +16,19 @@ body {
 	background: azure;
 	text-align: center;
 	color: indigo;
-	padding: 10%;
-	font-size: 36px;
+	font-size: 48px;
 }
 
 h1 {
-	font-size: 1.8em;
+	font-size: 1.05em;
 	font-weight: 900;
-	margin-top: -10%;
+	padding: 1.1%;
+
 }
 
 #gameContainer {
 	min-height: 400px;
 	min-width: 400px;
-	padding: 30px;
 }
 
 table {
@@ -36,7 +36,7 @@ table {
 	border-spacing: 5px;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
-	margin: 20px auto;
+	margin: 15px auto;
 }
 
 table,
@@ -47,18 +47,18 @@ td {
 
 td {
 	padding: 0;
-	cursor: pointer;
-	width: 100px;
-	height: 100px;
-	text-align: center;
+	width: 20vh;
+	height: 20vh;
 	background-color: blue;
+	font-size: 1.8em;
+	cursor: pointer;
 	-webkit-transition: all 0.1s ease-out;
 	transition: all 0.1s ease-out;
 }
 
 button {
-	margin: 25px auto 10px auto;
 	font: small-caps 400 0.6em Helvetica !important;
+	cursor: pointer;
 }
 
 button:focus {
@@ -73,18 +73,8 @@ button:focus {
 /* For mobile devices */
 
 @media screen and (orientation: portrait) and (max-height: 768px) {
-	body {
-		font-size: 28px;
-	}
-	#gameContainer {
-		padding: 0;
-		min-width: 70vw;
-	}
 
-	button {
-		margin-top: -28%;
-	}
-	#timer {
-		margin-top: -15%;
-	}
+
+
+
 }
