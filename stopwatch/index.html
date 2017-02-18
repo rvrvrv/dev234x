@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stopwatch Demo</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Rock+Salt">
+	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<h2>Stopwatch Demo</h2>
+		<div id="timer">0.00</div>
+		<div class="row" id="controls">
+			<button class="btn btn-outline-warning btn-lg" id="startBtn"><u>S</u>tart/<u>S</u>top</button>
+			<button class="btn btn-outline-danger btn-lg" id="resetBtn"><u>R</u>eset</button>
+			<button class="btn btn-outline-info btn-lg" id="recordBtn">Record <u>T</u>ime</button>
+		</div>
+
+		<div id="pastTimes">
+			<h4>Past Times:</h4>
+			<ul id="log">
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+</html>

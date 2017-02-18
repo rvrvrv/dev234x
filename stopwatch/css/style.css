@@ -1,0 +1,47 @@
+body {
+	background: black;
+	color: white;
+	font-size: 24px;
+	overflow: hidden;
+	-webkit-transition: 0.6s all;
+	transition: 0.6s all;
+}
+
+#timer {
+	margin: 8% 0 0 0;
+	font-family: 'Audiowide', monospace;
+	font-size: 2em;
+	color: yellow;
+}
+
+.running {
+	color: white !important;
+	text-shadow: 0 0 20px #0f0, 10px 10px 10px #0f0, -10px -10px 10px #0f0;
+	-webkit-transform-origin: -10%;
+	transform-origin: -10%;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	-webkit-transition: all 0.1s;
+	transition: all 0.1s;
+}
+
+#controls {
+	margin: 2% 0;
+}
+
+button {
+	margin: 0 0.2%;
+}
+
+h4 {
+	margin: 10% 0 2% 0;
+}
+
+#log {
+	width: 50%;
+	min-height: 50vh;
+	overflow-y: auto;
+	list-style-type: none;
+	font-family: 'Rock Salt', cursive;
+	letter-spacing: 0.17em;
+}
