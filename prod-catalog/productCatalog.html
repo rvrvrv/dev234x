@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/library.js"></script>
+	<title>Product Catalog</title>
+</head>
+
+<body>
+	<div id="searchById">
+		<h3>Search Product by ID</h3>
+		<input id="inputProduct">
+		<button class="btn btn-primary" id="searchByIdBtn">Search Product</button>
+	</div>
+	<div id="searchByType">
+		<h3>Search Product by Type</h3>
+		<input id="inputType">
+		<button class="btn btn-primary" id="searchByTypeBtn">Search Type</button>
+	</div>
+	<div id="searchByPrice">
+		<h3>Search Product by Price</h3>
+		<span class="bigText">$</span><input id="inputPrice" type="number">
+		<button class="btn btn-primary" id="searchByPriceBtn">Search Price</button>
+	</div>
+	<div id="result">
+		<h3>Examined Product</h3>
+		<p id="productText">Product Id: <br>Price: <br>Type: </p>
+		<h3>List of Similar Products</h3>
+		<div id="partialCatalog">
+			<table id="similarTable">
+				<tr>
+					<th>ProductId</th>
+					<th>Type</th>
+					<th>Price</th>
+					<th>Examine</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div id="listAll">
+		<h3>List of All Products</h3>
+		<div id="fullCatalog">
+			<table id="allTable">
+				<tr>
+					<th>ProductId</th>
+					<th>Type</th>
+					<th>Price</th>
+					<th>Examine</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script src="js/productCatalog.js"></script>
+
+</html>
