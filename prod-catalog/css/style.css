@@ -8,12 +8,20 @@ body {
 input {
 	font-size: 1.6em;
 	margin-left: 15px;
+	vertical-align: bottom;
+	border-radius: 5px;
 }
 
 .bigText {
 	font-size: 2em;
 	margin-right: -13px;
+	vertical-align: bottom;
 }
+
+#productText {
+	font: small-caps 700 1.3em 'Tahoma';
+}
+
 table {
 	width: 300px;
 	background: #eef;
@@ -30,7 +38,7 @@ td {
 	margin-top: 10px;
 }
 
-#partialCatalog, #fullCatalog {
+.listing {
 	overflow-x: hidden;
 	overflow-y: auto;
 	max-width: 320px;

@@ -1,5 +1,8 @@
 /*jshint browser: true, esversion: 6*/
-/* global $, console, alert */
+/* global console, alert, api */
+
+//For ease of hiding/showing div
+const examined = document.getElementById('examined');
 
 function createTableHeader(tableId) {
 	var tableHeaderRow = document.createElement('TR');
@@ -9,10 +12,10 @@ function createTableHeader(tableId) {
 		th[i] = document.createElement('TH');
 	}
 
-	th[1].appendChild(document.createTextNode("ProductId"));
-	th[2].appendChild(document.createTextNode("Type"));
-	th[3].appendChild(document.createTextNode("Price"));
-	th[4].appendChild(document.createTextNode("Examine"));
+	th[1].appendChild(document.createTextNode('Product ID'));
+	th[2].appendChild(document.createTextNode('Type'));
+	th[3].appendChild(document.createTextNode('Price'));
+	th[4].appendChild(document.createTextNode('Examine'));
 
 	for (let i = 1; i <= 4; i++) {
 		tableHeaderRow.appendChild(th[i]);
@@ -55,7 +58,7 @@ function updateTable(tableId, productArray) {
 }
 
 function updateExaminedText(product){
-    var outputString = `Product Id: ${product.id}
+    var outputString = `Product ID: ${product.id}
 								<br>Price: ${product.price}
 								<br>Type: ${product.type}`;
     document.getElementById('productText').innerHTML = outputString;
@@ -78,22 +81,22 @@ function getIntersection(arrA,arrB,searchedId){
 }
 
 function searchByType(searchType){
+	examined.style.display = 'none';
     api.searchProductsByType(searchType)
 		 .then(function(matches){
-		 	document.getElementById('productText').innerHTML = '';
 		 	updateTable('similarTable', matches);
-    }).catch(function(matches){
-        console.error(matches);
+    }).catch(function(val){
+        alert(val);
     });
 }
 
 function searchByPrice(searchPrice){
+	examined.style.display = 'none';
     api.searchProductsByPrice(searchPrice, 50)
 		 .then(function(matches){
-		 	document.getElementById('productText').innerHTML = '';
 		 	updateTable('similarTable', matches);
-    }).catch(function(matches){
-        console.error(matches);
+    }).catch(function(err){
+        alert(err);
     });
 }
 
@@ -102,11 +105,12 @@ function processSearch(searchId){
     api.searchProductById(searchId).then(function(val){
         return Promise.all([api.searchProductsByPrice(val.price,50),api.searchProductsByType(val.type),val]);
     }).then(function(val){
+		  examined.style.display = 'block';
         var similarArray = getIntersection(val[0],val[1],val[2].id);
         updateExaminedText(val[2]);
         updateTable('similarTable', similarArray);
-    }).catch(function(val){
-        alert(val);
+    }).catch(function(err){
+        alert(err);
     });
 }
 

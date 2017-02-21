@@ -27,13 +27,15 @@
 		<button class="btn btn-primary" id="searchByPriceBtn">Search Price</button>
 	</div>
 	<div id="result">
-		<h3>Examined Product</h3>
-		<p id="productText">Product Id: <br>Price: <br>Type: </p>
+		<div id="examined">
+			<h3>Examined Product</h3>
+			<p id="productText">Product ID:&nbsp;<br>Price:&nbsp;<br>Type:&nbsp;</p>
+		</div>
 		<h3>List of Similar Products</h3>
-		<div id="partialCatalog">
+		<div class="listing" id="partialCatalog">
 			<table id="similarTable">
 				<tr>
-					<th>ProductId</th>
+					<th>Product ID</th>
 					<th>Type</th>
 					<th>Price</th>
 					<th>Examine</th>
@@ -43,10 +45,10 @@
 	</div>
 	<div id="listAll">
 		<h3>List of All Products</h3>
-		<div id="fullCatalog">
+		<div class="listing" id="fullCatalog">
 			<table id="allTable">
 				<tr>
-					<th>ProductId</th>
+					<th>Product ID</th>
 					<th>Type</th>
 					<th>Price</th>
 					<th>Examine</th>
@@ -56,5 +58,4 @@
 	</div>
 </body>
 <script src="js/productCatalog.js"></script>
-
 </html>
