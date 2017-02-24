@@ -1,0 +1,19 @@
+body {
+	overflow: hidden;
+	margin: 2%;
+}
+
+h3 {
+	margin-top: 7%;
+}
+
+textarea {
+	height: 100px;
+	width: 90%;
+	max-width: 500px;
+}
+
+footer {
+	position: absolute;
+	bottom: 10%;
+}
