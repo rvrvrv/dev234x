@@ -2,10 +2,6 @@
 /* global $, console, Headers, Request, alert */
 $(document).ready(function () {
 
-	function formatPhrases(phrases) {
-
-	}
-
 	function analyze() {
 		//Declare request vars
 		var reqBody = {
@@ -35,7 +31,7 @@ $(document).ready(function () {
 			else return Promise.reject(new Error(response.statusText));
 		}).then(response => {
 			let phrases = response.documents[0].keyPhrases;
-			$('#output').html(`Total Key Phrases: ${phrases.length}</br>${formatPhrases(phrases)}`);
+			$('#output').html(`Total Key Phrases: ${phrases.length}</br>${phrases.join(', ')}`);
 		}).catch(err => {
 			$('#output').html('An error has occured.');
 		});
