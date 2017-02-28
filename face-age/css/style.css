@@ -1,0 +1,40 @@
+body {
+	overflow: hidden;
+	margin: 2%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+h3 {
+	margin-top: 7%;
+}
+
+#output {
+	margin-top: 3%;
+	text-transform: capitalize;
+}
+
+#imgUrl {
+	display: block;
+	width: 50%;
+	min-width: 360px;
+	margin-bottom: 1%;
+	background: #DDF;
+}
+
+#userImg {
+	max-width: 100vw;
+	max-height: 50vh;
+	margin-bottom: 10px;
+}
+
+#error {
+	display: none;
+}
+
+footer {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	max-width: 200px;
+}
