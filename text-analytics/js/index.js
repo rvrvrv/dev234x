@@ -28,7 +28,6 @@ const $out = $('#output');
 
 		//Actual request occurs here
 		fetch(request).then(function(response) {
-			console.log(response);
 			if (response.ok) return response.json();
 			else return Promise.reject(new Error(response.statusText));
 		}).then(response => {
