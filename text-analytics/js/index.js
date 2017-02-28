@@ -1,8 +1,10 @@
 /*jshint browser: true, esversion: 6*/
 /* global $, console, Headers, Request, alert */
 $(document).ready(function () {
+const $out = $('#output');
 
 	function analyze() {
+		$('#analyzeBtn').html('Analyzing...');
 		//Declare request vars
 		var reqBody = {
 			'documents': [
@@ -30,13 +32,18 @@ $(document).ready(function () {
 			if (response.ok) return response.json();
 			else return Promise.reject(new Error(response.statusText));
 		}).then(response => {
+			$('#analyzeBtn').html('Analyze');
 			let phrases = response.documents[0].keyPhrases;
-			$('#output').html(`Total Key Phrases: ${phrases.length}</br>${phrases.join(', ')}`);
+			$out.html(`Total Key Phrases: ${phrases.length}</br>${phrases.join(', ')}`);
+			$out.fadeIn('slow');
 		}).catch(err => {
-			$('#output').html('An error has occured.');
+			$('#analyzeBtn').html('Analyze');
+			$out.html('An error has occured.');
 		});
 	}
 
 	//Call fetch request when button is clicked
-	$('#analyzeBtn').click(analyze);
+	$('#analyzeBtn').on('click', () => {
+		$out.fadeOut('fast', () => { analyze(); });
+	});
 });
