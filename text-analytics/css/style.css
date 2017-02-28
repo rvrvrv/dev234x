@@ -1,6 +1,8 @@
 body {
 	overflow: hidden;
 	margin: 2%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 h3 {
