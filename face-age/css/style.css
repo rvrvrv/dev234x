@@ -1,6 +1,6 @@
 body {
 	background: #000 url('http://i.imgsafe.org/704a61067f.jpg') no-repeat fixed top center;
-	overflow: hidden;
+	overflow-x: hidden;
 	margin: 2%;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
@@ -31,6 +31,7 @@ h3 {
 
 #error {
 	display: none;
+	width: 50%;
 }
 
 #info {
