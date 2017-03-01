@@ -7,7 +7,7 @@ const $out = $('#output');
 		//Update UI
 		$('#error').fadeOut('fast');
 		$('#userImg').attr('src', $('#imgUrl').val());
-		$('#analyzeBtn').html('Analyzing...');
+		$('#analyzeBtn').html('Analyzing...&nbsp;<i class="fa fa-spinner fa-pulse fa-fw"></i>');
 		//Declare request vars
 		var reqBody = {
 			'url': $('#imgUrl').val()
