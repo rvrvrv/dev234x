@@ -1,5 +1,5 @@
 body {
-	background: #000 url('http://i.imgsafe.org/704a61067f.jpg') no-repeat fixed top center;
+	background: #000 url('http://i.imgsafe.org/704a61067f.jpg') top center /cover no-repeat fixed;
 	overflow-x: hidden;
 	margin: 2%;
 	-webkit-transition: all 0.2s ease;
@@ -39,7 +39,19 @@ h3 {
 	top: 5px;
 	right: 5px;
 	max-width: 200px;
-	background: rgba(255,255,255,0.8);
+	background: rgba(255, 255, 255, 0.8);
 	border-radius: 5%;
 	padding: 0.5%;
+}
+
+
+/* For mobile devices */
+
+@media screen and (orientation: portrait) and (max-width: 640px) {
+	#info {
+		display: none;
+	}
+	#imgUrl {
+		min-width: 95vw;
+	}
 }
