@@ -1,16 +1,18 @@
 /*jshint browser: true, esversion: 6*/
 /* global $, console, Headers, Request, alert */
 $(document).ready(function () {
-const $out = $('#output');
+	//Global vars
+	const $out = $('#output');
+	var $url = $('#imgUrl').val();
 
 	function analyze() {
 		//Update UI
 		$('#error').fadeOut('fast');
-		$('#userImg').attr('src', $('#imgUrl').val());
+		$('#userImg').attr('src', $url);
 		$('#analyzeBtn').html('Analyzing...&nbsp;<i class="fa fa-spinner fa-pulse fa-fw"></i>');
 		//Declare request vars
 		var reqBody = {
-			'url': $('#imgUrl').val()
+			'url': $url
 		};
 		var myHeader = new Headers({
 			'Content-Type': 'application/json',
@@ -44,8 +46,14 @@ const $out = $('#output');
 		});
 	}
 
-	//Call fetch request when button is clicked
 	$('#analyzeBtn').on('click', () => {
-		$out.fadeOut('fast', () => { analyze(); });
+		//Only call analyze function on new URLs
+		if ($('#imgUrl').val() !== $url) {
+			$url = $('#imgUrl').val();
+			$out.fadeOut('fast', () => { analyze(); });
+		}
+		else {
+			$out.fadeOut('fast', () => { $out.fadeIn('fast');});
+		}
 	});
 });
