@@ -1,0 +1,82 @@
+body {
+	background: #000;
+	color: #dcdea8;
+	overflow-x: hidden;
+	margin: 1%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+.input {
+	margin: 3% 0;
+}
+
+p, #filmNum {
+	color: #f0ad4e;
+	font-weight: 700;
+}
+
+a, a:hover, a:active, a:visited {
+	color: #fff;
+}
+
+#filmNum {
+	width: 55px;
+	height: 55px;
+	margin: 0 20px 0 0;
+	border-radius: 10%;
+	background: #000;
+	font-size: 3.5em;
+	vertical-align: bottom;
+	text-align: center;
+}
+
+#searchBtn {
+	font-size: 2em;
+	padding: 0.7%;
+	cursor: pointer;
+}
+
+#searchBtn:disabled {
+	cursor: wait;
+}
+
+#filmTitle {
+	font: italic small-caps bold 2em/100% Arial;
+}
+
+#info {
+	position: absolute;
+	top: 5px;
+	right: -200px;
+	max-width: 200px;
+	background: rgba(70, 40, 0, 0.8);
+	border-radius: 5%;
+	padding: 0.5%;
+	-webkit-transition: 1s ease-out;
+	transition: 1s ease-out;
+}
+
+#error {
+	display: none;
+	width: 50%;
+}
+
+
+/* For mobile devices */
+
+@media screen and (orientation: portrait) and (max-width: 640px) {
+	#info {
+		display: none;
+	}
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+	body {
+		margin: 0 1%;
+	}
+	h3,
+	#output {
+		margin-top: 0;
+	}
+}
