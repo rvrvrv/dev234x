@@ -53,7 +53,7 @@ $(document).ready(function () {
 	//Restore button to original properties
 	function restoreBtn() {
 		$btn.prop('disabled', false);
-		$('#searchBtn').html('<i class="fa fa-star"></i>&nbsp;Go!</button>');
+		$btn.html('<i class="fa fa-star"></i>&nbsp;Go!</button>');
 	}
 
 	$btn.click(() => {
