@@ -13,8 +13,10 @@
 		<h1>Face API Demo</h1>
 		<div id="input">
 			<h3>Enter Image URL</h3>
-			<input type="text" id="imgUrl" value="https://i.imgsafe.org/5a365d8442.jpg">
-			<button class="btn btn-info" id="analyzeBtn">Analyze</button>
+			<form onsubmit="return false">
+				<input type="text" id="imgUrl" value="https://i.imgsafe.org/5a365d8442.jpg">
+				<button class="btn btn-info" id="analyzeBtn">Analyze</button>
+			</form>
 		</div>
 		<div id="output">
 			<div id="resultsTop">
@@ -27,7 +29,7 @@
 			</div>
 		</div>
 		<div id="error">An error has occured, most likely due to an invalid image URL.<br>Please try again with a new image.</div>
-<div id="info">Visit <a href="https://www.microsoft.com/cognitive-services/en-us/face-api" target="_blank">this link</a> for more information regarding the Microsoft Cognitive Services Face API.</div>
+		<div id="info">Visit <a href="https://www.microsoft.com/cognitive-services/en-us/face-api" target="_blank">this link</a> for more information regarding the Microsoft Cognitive Services Face API.</div>
 </body>
 <script src="https://use.fontawesome.com/21a9ccba03.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
