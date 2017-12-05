@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Starships Comparison</title>
-	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<div class="container-fluid main">
-		<h3>Select Two Starships:</h3>
-		<form class="form-inline" onsubmit="return false">
+	<div class="container">
+		<h3>Starships Comparison</h3>
+		<form class="form-inline justify-content-around" onsubmit="return false">
 			<div class="form-group">
 				<label class="sr-only" for="ship1">Ship 1</label>
-				<select id="ship1">
+				<select class="form-control" id="ship1">
 				  <option value="2">CR90 Corvette</option>
 				  <option value="75">V-Wing</option>
 				  <option value="74">Belbullab-22 Starfighter</option>
@@ -30,7 +30,7 @@
 				  <option value="10">Millenium Falcon</option>
 				</select>
 				<label class="sr-only" for="ship2">Ship 2</label>
-				<select id="ship2">
+				<select class="form-control" id="ship2">
 				  <option value="10">Millenium Falcon</option>
 				  <option value="39">Naboo Fighter</option>
 				  <option value="29">B-wing</option>
@@ -43,7 +43,7 @@
 				  <option value="74">Belbullab-22 Starfighter</option>
 				  <option value="75">V-Wing</option>
 				  <option value="2">CR90 Corvette</option>
-      		</select>
+				</select>
 			</div>
 			<button class="btn btn-warning" id="compareBtn"><i class="fa fa-fighter-jet"></i>&nbsp;Compare</button>
 		</form>
@@ -51,39 +51,39 @@
 			<table id="statsTbl">
 				<tr>
 					<th></th>
-					<th class="thTop">Starship 1</th>
-					<th class="thTop">Starship 2</th>
+					<th class="th-top">Starship 1</th>
+					<th class="th-top">Starship 2</th>
 				</tr>
 				<tr>
 					<th>Name</th>
-					<td id="ship1Name">CR90 Corvette</td>
-					<td id="ship2Name">Millenium Falcon</td>
+					<td id="ship1Name">Solar Sailer</td>
+					<td id="ship2Name">Republic Attack Cruiser</td>
 				</tr>
 				<tr>
 					<th>Cost</th>
-					<td id="ship1Cost" class="winner">3,500,000</td>
-					<td id="ship2Cost">100,000</td>
+					<td id="ship1Cost">35,700</td>
+					<td id="ship2Cost" class="winner">59,000,000</td>
 				</tr>
 				<tr>
 					<th>Speed</th>
-					<td id="ship1Speed">950</td>
-					<td id="ship2Speed" class="winner">1,050</td>
+					<td id="ship1Speed" class="winner">1,600</td>
+					<td id="ship2Speed">975</td>
 				</tr>
 				<tr>
 					<th>Cargo Size</th>
-					<td id="ship1Cargo" class="winner">3,000,000</td>
-					<td id="ship2Cargo">100,000</td>
+					<td id="ship1Cargo">240</td>
+					<td id="ship2Cargo" class="winner">20,000,000</td>
 				</tr>
 				<tr>
 					<th>Passengers</th>
-					<td id="ship1Passengers" class="winner">600</td>
-					<td id="ship2Passengers">6</td>
+					<td id="ship1Passengers">11</td>
+					<td id="ship2Passengers" class="winner">2,000</td>
 				</tr>
 			</table>
 		</div>
 	</div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/21a9ccba03.js"></script>
+<script src="js/index.js"></script>
 </html>
