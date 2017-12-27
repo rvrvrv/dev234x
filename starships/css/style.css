@@ -23,6 +23,10 @@ h3, h5 {
 	width: 10em;
 }
 
+.btn:disabled {
+  cursor: wait;
+}
+
 .results {
 	margin-left: -1em;
 }
